@@ -19,7 +19,6 @@ const DiscountText = styled.p`
   font-size: 16px;
   line-height: 26px;
   color: ${colors.light};
-
 `;
 
 const RecallText = styled.a`
