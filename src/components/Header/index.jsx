@@ -1,48 +1,48 @@
 import React from 'react';
-import { ActionBox, HeaderNavContent, HeaderNavLinkList, HeaderNavbar, HeaderWrapper, PhoneContent, UserActions } from './style';
+import { Link } from 'react-router-dom';
 import HeaderTop from './HeaderTop';
-import { Container } from '../Container';
-import { Link, NavLink } from 'react-router-dom';
-import Logo from '../../assests/images/svgIcons/logo';
-import PhoneLogo from '../../assests/images/svgIcons/phoneLogo';
-import LikeIcon from '../../assests/images/svgIcons/like';
-import CartIcon from '../../assests/images/svgIcons/cart';
+import { Container } from '../Container/style';
+import * as Style from './style';
+// import Logo from '../../assests/images/svgIcons/logo';
+import { CartIcon, LikeIcon, LogoIcon, PhoneLogo } from '../../assests/images/svgIcons';
+
 
 
 const Header = () => {
   return (
-    <HeaderWrapper>
+    <Style.HeaderWrapper>
       <HeaderTop/>
-        <HeaderNavbar>
+        <Style.HeaderNavbar>
           <Container>
-            <HeaderNavContent>
+            <Style.HeaderNavContent>
               <Link to='/'>
-                <Logo/>
+                <LogoIcon/>
               </Link>
-              <HeaderNavLinkList>
-                <NavLink to='/'>Главная</NavLink>
-                <NavLink to='/'>Каталог</NavLink>
-                <NavLink to='/discount'>Оптовая продажа</NavLink>
-                <NavLink to='/about-us'>О нас</NavLink>
-              </HeaderNavLinkList>
-              <UserActions>
-                <PhoneContent href={`tel:+998919975777`}>
+              <Style.HeaderNavLinkList>
+                <Style.NavLink to='/'>Главная</Style.NavLink>
+                <Style.NavLink to='/'>Каталог</Style.NavLink>
+                <Style.NavLink to='/discount'>Оптовая продажа</Style.NavLink>
+                <Style.NavLink to='/about-us'>О нас</Style.NavLink>
+             
+              </Style.HeaderNavLinkList>
+              <Style.UserActions>
+                <Style.PhoneContent href={`tel:+998919975777`}>
                   <PhoneLogo/>
                   +99 (891) 997 57 77
-                </PhoneContent>
-                <ActionBox>
-                  <Link to='/like'>
+                </Style.PhoneContent>
+                <Style.ActionBox>
+                  <Link to='/favourite'>
                     <LikeIcon/>
                   </Link>
                   <Link to='/cart'>
                     <CartIcon/>
                   </Link>
-                </ActionBox>
-              </UserActions>
-            </HeaderNavContent>
+                </Style.ActionBox>
+              </Style.UserActions>
+            </Style.HeaderNavContent>
           </Container>
-        </HeaderNavbar>
-    </HeaderWrapper>
+        </Style.HeaderNavbar>
+    </Style.HeaderWrapper>
   )
 }
 

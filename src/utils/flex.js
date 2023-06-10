@@ -24,6 +24,6 @@ const flexBetween = css`
   justify-content: space-between;
 `;
 
-const flex = {justFlex, alignCenter, spaceBetween, center, flexBetween};
+const Flex = {justFlex, alignCenter, spaceBetween, center, flexBetween};
 
-export {flex};
+export default Flex;

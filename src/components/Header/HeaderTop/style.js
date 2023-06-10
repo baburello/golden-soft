@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import {colors} from "../../../utils/variable";
+import { Colors } from "../../../utils";
+
 
 const HeaderTopWrapper = styled.div`
   width: 100%;
   padding: 9px 16px;
-  background-color: ${colors.gray};
+  background-color: ${Colors.gray};
 `;
 
 const TextContent = styled.div`
-  display: flex;
+  display: Flex;
   align-items: center;
   justify-content: center;
   gap: 100px;
@@ -18,7 +19,7 @@ const DiscountText = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  color: ${colors.light};
+  color: ${Colors.light};
 `;
 
 const RecallText = styled.a`
@@ -27,7 +28,7 @@ const RecallText = styled.a`
   line-height: 26px;
   letter-spacing: 0.12em;
   text-decoration-line: underline;
-  color: ${colors.light};
+  color: ${Colors.light};
 `
 
 export {HeaderTopWrapper, DiscountText, RecallText, TextContent};

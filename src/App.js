@@ -9,6 +9,7 @@ import Delivery from './pages/Delivery';
 import DiscountSale from './pages/DiscountSale';
 import Order from './pages/Order';
 import Product from './pages/Product';
+import Favourite from "./pages/Favourite";
 import PageNotFound from './pages/PageNotFound';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path='discount' element={<DiscountSale/>}/>
       <Route path='/order' element={<Order/>}/>
       <Route path='/product' element={<Product/>}/>
+      <Route path='favourite' element={<Favourite/>}/>
       <Route path='*' element={<PageNotFound/>}/>
     </Routes>
    </BrowserRouter>
