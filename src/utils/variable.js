@@ -5,6 +5,7 @@ const dark = '#161C24';
 const gray = '#454F5B';
 const deepDark = '#0D2436';
 const light = '#fff';
+const borderColor = '#c4cdd5';
 
 const colors ={
   primaryColor,
@@ -13,6 +14,17 @@ const colors ={
   gray,
   deepDark,
   light,
+  borderColor,
+};
+
+export const adaptiveValue = (property, startSize, minSize) => {
+  const addSize = startSize - minSize;
+  return `
+  ${property}: ${startSize}px;
+  @media (max-width: 1440px) {
+    ${property}: calc(${minSize}px + ${addSize} * ((100vw - 420px) / (1440 - 420)));
+  }
+`;
 };
 
 export default colors;

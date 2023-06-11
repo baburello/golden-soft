@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Colors } from "../../../utils";
+import { Colors, Flex, } from "../../../utils";
+import { adaptiveValue } from "../../../utils/variable";
+
 
 
 const HeaderTopWrapper = styled.div`
@@ -9,15 +11,14 @@ const HeaderTopWrapper = styled.div`
 `;
 
 const TextContent = styled.div`
-  display: Flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-`
+  ${Flex.center};
+  ${adaptiveValue("gap", 100, 60)}
+`;
 
 const DiscountText = styled.p`
   font-weight: 500;
-  font-size: 16px;
+  ${adaptiveValue("font-size", 16, 12)}
+  ${adaptiveValue("line-height", 26, 12)}
   line-height: 26px;
   color: ${Colors.light};
 `;
@@ -29,6 +30,11 @@ const RecallText = styled.a`
   letter-spacing: 0.12em;
   text-decoration-line: underline;
   color: ${Colors.light};
+
+  @media(max-width: 768px){
+    display: none;
+  }
 `
+
 
 export {HeaderTopWrapper, DiscountText, RecallText, TextContent};
