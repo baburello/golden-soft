@@ -5,3 +5,4 @@ export {default as LikeIcon} from "./like";
 export {default as VcontactIcon} from "./vk";
 export {default as TwitterIcon} from "./twitter";
 export {default as FacebookIcon} from "./facebook";
+export {default as ArrowIcon} from "./arrowIcon"

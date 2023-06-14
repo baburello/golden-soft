@@ -29,5 +29,56 @@ export const GlobalStyles = createGlobalStyle`
       object-fit: cover;
     }
 
+    button{
+      border: none;
+    }
+
+    .swiper-pagination-bullets{
+      width: auto !important;
+    }
+
+    .swiper-pagination-bullet{
+      width: 8px !important;
+      height: 8px !important;
+      background-color: #ADD7FF !important;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .swiper-pagination-bullet::after{
+      content:"";
+      position: absolute;
+      top: -8px;
+      left: -8.5px;
+      /* bottom: -8px;
+      right: -8px; */
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid #ADD7FF;
+      opacity: 0;
+    }
+
+    .swiper-pagination-bullet:nth-child(even){
+      margin-inline: 24px !important;
+    };
+
+    .swiper-pagination-bullet-active{
+      background-color: ${Colors.primaryColor} !important;
+    }
+
+    .swiper-pagination-bullet-active.swiper-pagination-bullet::after{
+      opacity: 1;
+    }
+
+    .swiper-button{
+      background-color: transparent !important;
+    }
+
+    .swiper-button-disabled svg path{
+      stroke: #A4A4A4 !important;
+    }
+
+   
 
 `;
