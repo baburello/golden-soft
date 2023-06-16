@@ -6,17 +6,19 @@ import { adaptiveValue } from "../../../utils/variable";
 
 const BurgerMenuWrapper = styled.div`
   position: fixed;
+  background-color: ${Colors.light};
   top: 108px;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 90vh;
-  transform: ${({open}) => (open == true ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({open}) => (open === true ? "translateX(0)" : "translateX(-100%)")};
   transition: 0.4s;
   padding: 24px 16px 40px;
   ${Flex.spaceBetween};
   flex-direction: column;
+  /* opacity: 0.95; */
 `
 
 const BurgerMenuNav = styled.nav`

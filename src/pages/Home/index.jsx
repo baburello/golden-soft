@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import Banner from '../../components/Banner'
 import Statistic from '../../components/Statistic'
 import WhyUs from '../../components/WhyUs'
+import CategoryList from '../../components/CategoryList'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           <Banner />
           <Statistic />
           <WhyUs />
+          <CategoryList />
         </main>
       <Footer/>
     </React.Fragment>
