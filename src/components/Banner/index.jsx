@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { Container } from '../Container/style';
 import Button from '../Button';
 import * as S from "./style";

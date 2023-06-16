@@ -5,6 +5,7 @@ import Banner from '../../components/Banner'
 import Statistic from '../../components/Statistic'
 import WhyUs from '../../components/WhyUs'
 import CategoryList from '../../components/CategoryList'
+import PopularProducts from '../../components/PopularProducts'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
           <Statistic />
           <WhyUs />
           <CategoryList />
+          <PopularProducts />
         </main>
       <Footer/>
     </React.Fragment>

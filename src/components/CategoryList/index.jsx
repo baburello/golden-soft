@@ -3,8 +3,8 @@ import { Container } from '../Container/style';
 import { Title } from '../WhyUs/style';
 import { categoryListData } from './data';
 import * as S from "./style"
-import { Link } from 'react-router-dom';
-import Button from '../Button';
+// import { Link } from 'react-router-dom';
+// import Button from '../Button';
 
 const CategoryList = () => {
   return(
