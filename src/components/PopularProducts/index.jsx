@@ -52,6 +52,20 @@ const PopularProducts = () => {
             prevEl,
             nextEl
           }}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+            },
+            460: {
+              slidesPerView: 2,
+            },
+            620: {
+              slidesPerView: 3,
+            },
+            770: {
+              slidesPerView: 4,
+            }
+          }}
           modules={[Navigation,]}
           className="mySwiper"
         >

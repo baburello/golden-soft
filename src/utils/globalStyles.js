@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { Colors, Flex } from ".";
+import { adaptiveValue } from "./variable";
 
 export const GlobalStyles = createGlobalStyle`
       @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
@@ -77,6 +78,15 @@ export const GlobalStyles = createGlobalStyle`
 
     .swiper-button-disabled svg path{
       stroke: #A4A4A4 !important;
+    }
+
+    .error_message{
+      position: absolute;
+      bottom: -20px;
+      color: red;
+      ${adaptiveValue("font-size", 14, 12)}
+      margin-top: 5px;
+
     }
 
    

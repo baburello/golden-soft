@@ -23,7 +23,8 @@ const PopularSwiperNavigation = styled(SwiperNavigation)`
 const ProductCard = styled(SwiperSlide)`
   position: relative;
   color: ${Colors.lightGray};
-  display: block;
+  ${Flex.flexBetween};
+  flex-direction: column;
   box-shadow: inset 0px -1px 0px #EAEAEA, inset 1px 0px 0px #EAEAEA, inset -1px 0px 0px #EAEAEA;
 `;
 
@@ -91,7 +92,7 @@ const StockText = styled.span`
   font-size: 14px;
   line-height: 24px;
   color: ${Colors.gray}
-`
+`;
 
 export {
     PopularWrapper,
