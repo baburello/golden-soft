@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container } from '../Container/style';
-import { Title } from '../WhyUs/style';
+import { Container } from 'components/Container/style';
+import { Title } from 'components/WhyUs/style';
 import { categoryListData } from './data';
 import * as S from "./style"
 // import { Link } from 'react-router-dom';

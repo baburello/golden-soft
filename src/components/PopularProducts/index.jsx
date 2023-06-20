@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper } from "swiper/react";
-import { Container } from '../Container/style'
-import { Title } from '../WhyUs/style'
+import { Container } from 'components/Container/style'
+import { Title } from 'components/WhyUs/style'
 import { Navigation } from 'swiper';
 import * as S from "./style"
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { SwiperNavBtn } from '../Banner/style';
-import { ArrowIcon } from '../../assests/images/svgIcons';
+import { SwiperNavBtn } from 'components/Banner/style';
+import { ArrowIcon } from 'assets/images/svgIcons';
 import { popularProductData } from './data';
 
 const PopularProducts = () => {

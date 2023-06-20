@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from "./style";
-import { PhoneLogo } from '../../../assests/images/svgIcons';
+import { PhoneLogo } from 'assets/images/svgIcons';
 
 const BurgerMenu = ({open, handleClick}) => {
   return (

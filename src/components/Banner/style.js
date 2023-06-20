@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
-import { Colors, Flex } from "../../utils";
-import { adaptiveValue } from "../../utils/variable";
+import { Colors, Flex } from "utils";
+import { adaptiveValue } from "utils/variable";
 
 const BannerWrapper = styled.div`
   padding: 100px 0 30px;

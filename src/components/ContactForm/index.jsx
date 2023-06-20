@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorMessage, Formik } from "formik"
+import { Formik } from "formik"
 import * as S from "./style"
 import { Container } from '../Container/style'
 import { Title } from '../WhyUs/style'
@@ -18,7 +18,7 @@ const ContactForm = () => {
    const res = await axios.post("https://reqres.in/api/users", {
     data: values,
    });
-    if(res.status == 201){
+    if(res.status === 201){
       resetForm();
     } else {
       console.log("error")

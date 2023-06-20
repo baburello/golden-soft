@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, Flex } from "../../utils";
+import { Colors, Flex } from "utils";
 
 const FooterWrapper = styled.footer`
   width: 100%;

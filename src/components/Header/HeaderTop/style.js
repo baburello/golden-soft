@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Colors, Flex, } from "../../../utils";
-import { adaptiveValue } from "../../../utils/variable";
+import { Colors, Flex, } from "utils";
+import { adaptiveValue } from "utils/variable";
 
 
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Colors, Flex } from "../../../utils";
+import { Colors, Flex } from "utils";
 import { NavLink } from "react-router-dom";
-import { adaptiveValue } from "../../../utils/variable";
+import { adaptiveValue } from "utils/variable";
 
 
 const BurgerMenuWrapper = styled.div`

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../Container/style';
+import { Container } from 'components/Container/style';
 import { WhyUsData } from './data';
 import * as S from "./style";
 

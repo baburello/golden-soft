@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom";
-import { Colors, Flex, } from "../../utils";
-import { adaptiveValue } from "../../utils/variable";
+import { Colors, Flex, } from "utils";
+import { adaptiveValue } from "utils/variable";
 
 
 const HeaderWrapper = styled.header`

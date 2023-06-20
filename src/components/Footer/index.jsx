@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './style';
-import { Container } from '../Container/style';
-import { LogoIcon } from '../../assests/images/svgIcons';
+import { Container } from 'components/Container/style';
+import { LogoIcon } from 'assets/images/svgIcons';
 import { Link } from 'react-router-dom';
 import { socialMediaData } from './data';
 

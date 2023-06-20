@@ -1,4 +1,4 @@
-import { BoxIcon, EvaluateIcon } from "../../assests/images/svgIcons";
+import { BoxIcon, EvaluateIcon } from "assets/images/svgIcons";
 
 const WhyUsData = [
   {

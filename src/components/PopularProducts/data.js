@@ -1,10 +1,15 @@
-import image from "../../assests/images/Banner/image_1.png"
+import image_1 from "assets/images/PopularProducts/product_1.png";
+import image_2 from "assets/images/PopularProducts/product_2.png";
+import image_3 from "assets/images/PopularProducts/product_3.png";
+import image_4 from "assets/images/PopularProducts/product_4.png";
+
+
 
 const popularProductData = [
   {
     id: 0,
     inStock: true,
-    image: image,
+    image: image_1,
     title: "Дверной Замок Golden Soft для отеля",
     main_price: "33 000₽",
     oldPrice: "37 000₽",
@@ -12,7 +17,7 @@ const popularProductData = [
   {
     id: 1,
     inStock: false,
-    image: image,
+    image: image_2,
     title: "Вариативный замок Golden Soft для отеля",
     main_price: "7 000₽",
     oldPrice: "8 000₽",
@@ -20,7 +25,7 @@ const popularProductData = [
   {
     id: 2,
     inStock: true,
-    image: image,
+    image: image_3,
     title: "Дверной Замок Golden Soft для офиса",
     main_price: "33 000₽",
     oldPrice: "39 000₽",
@@ -28,7 +33,7 @@ const popularProductData = [
   {
     id: 3,
     inStock: true,
-    image: image,
+    image: image_4,
     title: "Дверной Замок Golden Soft для офиса",
     main_price: "9 000₽",
     oldPrice: "12 000₽",
@@ -36,7 +41,7 @@ const popularProductData = [
   {
     id: 4,
     inStock: true,
-    image: image,
+    image: image_1,
     title: "Дверной Замок Golden Soft для отеля",
     main_price: "33 000₽",
     oldPrice: "37 000₽",
@@ -44,7 +49,7 @@ const popularProductData = [
   {
     id: 5,
     inStock: true,
-    image: image,
+    image: image_2,
     title: "Дверной Замок Golden Soft для отеля",
     main_price: "33 000₽",
     oldPrice: "37 000₽",

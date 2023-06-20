@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
 import HeaderTop from './HeaderTop';
-import { Container } from '../Container/style';
+import { Container } from 'components/Container/style';
 import * as Style from './style';
 // import Logo from '../../assests/images/svgIcons/logo';
-import { CartIcon, LikeIcon, LogoIcon, PhoneLogo } from '../../assests/images/svgIcons';
+import { CartIcon, LikeIcon, LogoIcon, PhoneLogo } from 'assets/images/svgIcons';
 
 
 

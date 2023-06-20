@@ -1,27 +1,26 @@
- import image from "../../assests/images/Banner/image_1.png"
-//  import image from "../../assests/images/category_img_2.png"
-//  import image from "../../assests/images/category_img_3.png"
-//  import image from "../../assests/images/category_img_4.png"
+import image_1 from "assets/images/Banner/image_1.png"
+ import image_2 from "assets/images/Banner/image_2.png"
+ import image_3 from "assets/images/Banner/image_3.png"
 
  const categoryListData = [
   {
     id: 0,
-    image: image,
+    image: image_1,
     title: "Для отелей",
   },
   {
     id: 1,
-    image: image,
+    image: image_2,
     title: "Для шкафчиков",
   },
   {
     id: 2,
-    image: image,
+    image: image_3,
     title: "Для офисов",
   },
   {
     id: 3,
-    image: image,
+    image: image_1,
     title: "Замки для дома",
   },
  ];

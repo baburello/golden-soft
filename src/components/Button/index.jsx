@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Colors } from '../../utils'
-import { adaptiveValue } from '../../utils/variable'
+import { Colors } from 'utils'
+import { adaptiveValue } from 'utils/variable'
 
 const ButtonWrapper = styled.button`
   padding: 12px 37px;
