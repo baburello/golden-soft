@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
 import HeaderTop from './HeaderTop';
@@ -8,16 +8,23 @@ import * as Style from './style';
 import { CartIcon, LikeIcon, LogoIcon, PhoneLogo } from 'assets/images/svgIcons';
 
 
-
-
 const Header = () => {
+  // const pathname = window.location.pathname;
   const [burger, setBurger] = useState(false)
 
   const handleClick = () =>{
     setBurger(!burger);
   };
 
-  console.log(burger)
+  //no scroll when burgermenu is open
+  useEffect(() => {
+    if (burger) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style = "auto";
+    }
+  });
+
   return (
     <Style.HeaderWrapper>
       <HeaderTop/>
