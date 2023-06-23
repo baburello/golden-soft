@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "components/Header";
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
 import CatalogListItems from "components/CatalogListItems";
 import { catalogListData } from "./data";
 import { Container } from "components/Container/style";

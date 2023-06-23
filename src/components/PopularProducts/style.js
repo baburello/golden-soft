@@ -21,16 +21,20 @@ const PopularSwiperNavigation = styled(SwiperNavigation)`
 `;
 
 const ProductCard = styled(SwiperSlide)`
+  max-width: 288px;
+  width: 100%;
   position: relative;
   color: ${Colors.lightGray};
   ${Flex.flexBetween};
   flex-direction: column;
-  box-shadow: inset 0px -1px 0px #EAEAEA, inset 1px 0px 0px #EAEAEA, inset -1px 0px 0px #EAEAEA;
+  border: 1px solid ${Colors.borderColor};
 `;
 
 const ProductImageLink = styled(Link)`
   width: 100%;
-  max-height: 320px;
+  overflow: hidden;
+  height: 320px;
+  text-align: center;
 `;
 
 const ProductCardInfo = styled.div`
@@ -88,10 +92,19 @@ const InStockTextBox = styled.div`
   padding-inline: 5px;
 `;
 
+const ProductImage = styled.img`
+  width: 200px !important;
+  /* padding-top: 30px; */
+  height: auto;
+  object-fit: contain;
+`;
+
 const StockText = styled.span`
   font-size: 14px;
   line-height: 24px;
-  color: ${Colors.gray}
+  color: ${Colors.gray};
+  display: block;
+  margin: 0 auto;
 `;
 
 export {
@@ -107,5 +120,6 @@ export {
     OldPrice,
     SaleBox,
     InStockTextBox,
-    StockText
+    StockText,
+    ProductImage
 };
