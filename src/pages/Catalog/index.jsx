@@ -30,11 +30,11 @@ const Catalog = () => {
                                 text={el.text}
                             />
                         ))}
-            </S.CatalogList>
-            <AllCategoryBtn to='/catalog'>Смотреть все</AllCategoryBtn>
+                    </S.CatalogList>
+                    <AllCategoryBtn to='/catalog'>Смотреть все</AllCategoryBtn>
                 </S.CatalogContent>
-        </Container>
-        <Footer />
+            </Container>
+            <Footer />
         </S.CatalogWrapper>
     );
 };

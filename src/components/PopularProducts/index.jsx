@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
+import { breakpoints } from "./data";
 import { Container } from "components/Container/style";
 import { SwiperNavBtn } from "components/Banner/style";
 import { Title } from "components/WhyUs/style";
@@ -12,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { ArrowIcon } from "assets/images/svgIcons";
+import ProductCard from "components/ProductCard";
 // import { popularProductData } from "./data";
 
 const PopularProducts = () => {
@@ -69,44 +71,22 @@ const PopularProducts = () => {
                         prevEl,
                         nextEl,
                     }}
-                    breakpoints={{
-                        300: {
-                            slidesPerView: 1,
-                        },
-                        460: {
-                            slidesPerView: 2,
-                        },
-                        620: {
-                            slidesPerView: 3,
-                        },
-                        770: {
-                            slidesPerView: 4,
-                        },
-                    }}
-                    modules={[Navigation]}
+                    autoplay={true}
+                    loop={true}
+                    breakpoints={breakpoints}
+                    modules={[Navigation, Autoplay]}
                     className='mySwiper'
                 >
                     {data?.map((el) => (
-                        <S.ProductCard key={el.id}>
-                            <S.ProductImageLink to='/'>
-                                <S.InStockTextBox>
-                                    <S.StockText>
-                                        {el.inStock
-                                            ? "В наличии"
-                                            : "Нет в наличии"}
-                                    </S.StockText>
-                                </S.InStockTextBox>
-                                <S.SaleBox>Sale</S.SaleBox>
-                                <S.ProductImage src={el.image} alt={el.name} />
-                            </S.ProductImageLink>
-                            <S.ProductCardInfo>
-                                <S.InfoTitle>{el.name}</S.InfoTitle>
-                                <S.PriceBoard>
-                                    <S.MainPrice>{el.currentPrice}</S.MainPrice>
-                                    <S.OldPrice>{el.oldPrice}</S.OldPrice>
-                                </S.PriceBoard>
-                            </S.ProductCardInfo>
-                        </S.ProductCard>
+                        <SwiperSlide key={el.id}>
+                            <ProductCard
+                                inStock={el.inStock}
+                                image={el.image}
+                                name={el.name}
+                                currentPrice={el.currentPrice}
+                                oldPrice={el.oldPrice}
+                            />
+                        </SwiperSlide>
                     ))}
                 </Swiper>
             </Container>

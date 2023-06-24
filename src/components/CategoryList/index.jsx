@@ -22,7 +22,7 @@ const CategoryList = () => {
             ))
           }
         </S.CategoryList>
-        <S.AllCategoryBtn>Все категории</S.AllCategoryBtn>
+        <S.AllCategoryBtn to='/catalog'>Все категории</S.AllCategoryBtn>
       </Container>
     </S.CategoryWrapper>
   )
