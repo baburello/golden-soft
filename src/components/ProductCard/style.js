@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Colors, Flex } from "utils/index";
-import { SwiperSlide } from "swiper/react";
+// import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 
 
