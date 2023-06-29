@@ -9,6 +9,8 @@ import BreadCrumbs from "components/BreadCrumbs";
 import Footer from "components/Footer";
 import PopularProducts from "components/PopularProducts";
 import ContactForm from "components/ContactForm";
+import InfoColumns from "components/InfoColumns";
+import { infoData, infoSecondData } from "components/InfoColumns/data";
 
 const Category = () => {
     const { type } = useParams();
@@ -47,6 +49,8 @@ const Category = () => {
                 </CategoryListWrapper>
             </Container>
             <PopularProducts />
+            <InfoColumns data={infoData} />
+            <InfoColumns data={infoSecondData} reverse={true}/>
             <ContactForm />
             <Footer />
         </>
@@ -58,5 +62,16 @@ export default Category;
 const CategoryListWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+    flex-wrap: wrap;
     margin-block: 70px;
+   
+   @media(max-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @media(max-width: 576px){
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+   }
 `;

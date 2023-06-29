@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiperRef } from "hooks/useSwiperRef";
 import { Autoplay, Navigation } from "swiper";
 import { breakpoints } from "./data";
