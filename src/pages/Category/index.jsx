@@ -44,6 +44,7 @@ const Category = () => {
                             inStock={el.inStock}
                             name={el.name}
                             oldPrice={el.oldPrice}
+                            id={el.id}
                         />
                     ))}
                 </CategoryListWrapper>

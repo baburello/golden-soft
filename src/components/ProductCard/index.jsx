@@ -1,10 +1,10 @@
 import React from 'react'
 import * as S from "./style"
 
-const ProductCard = ({inStock, image, name, currentPrice, oldPrice }) => {
+const ProductCard = ({inStock, image, name, currentPrice, oldPrice, id}) => {
   return (
     <S.ProductCardWrapper>
-    <S.ProductImageLink to='/'>
+    <S.ProductImageLink to={`/product/detail/${id}`}>
         <S.InStockTextBox>
             <S.StockText>
                 {inStock
