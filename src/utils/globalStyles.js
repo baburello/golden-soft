@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { Colors, Flex } from ".";
+import { Colors, Flex } from "./index";
 import { adaptiveValue } from "./variable";
 
 export const GlobalStyles = createGlobalStyle`

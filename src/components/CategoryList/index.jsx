@@ -17,7 +17,7 @@ const CategoryList = () => {
               <S.CategoryListItem key={el.id }>
                 <S.ListImage src={el.image} alt={el.title} />
                 <S.ListTitle>{el.title}</S.ListTitle>
-                <S.ListLink to='/category'>Перейти</S.ListLink>
+                <S.ListLink to={ `/category/${el.type}`}>Перейти</S.ListLink>
               </S.CategoryListItem>
             ))
           }

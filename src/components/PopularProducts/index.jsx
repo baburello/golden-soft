@@ -59,10 +59,8 @@ const PopularProducts = () => {
                         prevEl,
                         nextEl,
                     }}
-                    autoplay={true}
-                    loop={true}
                     breakpoints={breakpoints}
-                    modules={[Navigation, Autoplay]}
+                    modules={[Navigation]}
                     className='mySwiper'
                 >
                     {data?.map((el) => (
@@ -71,8 +69,9 @@ const PopularProducts = () => {
                                 inStock={el.inStock}
                                 image={el.image}
                                 name={el.name}
-                                currentPrice={el.currentPrice}
                                 oldPrice={el.oldPrice}
+                                currentPrice={el.currentPrice}
+                                id={el.id}
                             />
                         </SwiperSlide>
                     ))}
