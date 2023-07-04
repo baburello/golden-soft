@@ -11,10 +11,16 @@ import {
     Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Rate from "components/Rate";
+import { RateText, RateTextInfo } from "components/ProductCard/style";
 
 const ProductInfo = ({ name, oldPrice, currentPrice }) => {
     return (
         <S.ProductInfoWrapper>
+            <RateText>
+                <Rate />
+                <RateTextInfo>(12) отзывов</RateTextInfo>
+            </RateText>
             <ContentTitle>{name}</ContentTitle>
             <PriceBox>
                 <MainPriceText>{currentPrice}</MainPriceText>

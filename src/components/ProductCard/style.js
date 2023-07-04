@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Colors, Flex } from "utils/index";
-// import { SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
+import { SwiperSlide } from "swiper/react";
 
 const ProductCardWrapper = styled.div`
     max-width: 288px;
@@ -17,11 +17,10 @@ const ProductImageLink = styled(Link)`
     width: 100%;
     overflow: hidden;
     height: 320px;
-    text-align: center;
 `;
 
 const ProductCardInfo = styled.div`
-    padding: 20px;
+    padding: 10px 12px;
     text-align: left;
 `;
 
@@ -33,7 +32,8 @@ const InfoTitle = styled.h3`
 `;
 
 const PriceBoard = styled.div`
-    ${Flex.alignCenter};
+    width: 100%;
+    ${Flex.spaceBetween};
     gap: 12px;
     margin-top: 10px;
 `;
@@ -93,10 +93,11 @@ const StockText = styled.span`
 const RateText = styled.div`
     ${Flex.alignCenter};
     justify-content: space-between;
+    width: 250px;
 `;
 
 const RateTextInfo = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     color: ${Colors.gray};
 `;
 
