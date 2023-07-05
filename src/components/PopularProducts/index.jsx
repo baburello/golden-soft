@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiperRef } from "hooks/useSwiperRef";
@@ -15,10 +15,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { ArrowIcon } from "assets/images/svgIcons";
+import MainContext from "reducer/CartContext";
 // import { popularProductData } from "./data";
 
 const PopularProducts = () => {
     const [data, setData] = useState([]);
+    const { cartItems } = useContext(MainContext);
 
     async function getData() {
         const res = await axios.get(`${process.env.REACT_APP_MAIN_URL}`);
@@ -66,13 +68,10 @@ const PopularProducts = () => {
                     {data?.map((el) => (
                         <SwiperSlide key={el.id}>
                             <ProductCard
-                                inStock={el.inStock}
-                                image={el.image}
-                                name={el.name}
-                                oldPrice={el.oldPrice}
-                                currentPrice={el.currentPrice}
-                                id={el.id}
-                                mark={el?.mark}
+                                data={el}
+                                select={cartItems.some(
+                                    (item) => item.id === el.id
+                                )}
                             />
                         </SwiperSlide>
                     ))}

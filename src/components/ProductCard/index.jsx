@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from "./style";
 import Rate from "components/Rate";
+import { Button } from "@mui/material";
+import MainContext from "reducer/CartContext";
 
-const ProductCard = ({
-    inStock,
-    image,
-    name,
-    currentPrice,
-    oldPrice,
-    id,
-    mark,
-}) => {
+const ProductCard = ({data, select}) => {
+    const { inStock, image, name, currentPrice, oldPrice, id, mark } = data;
+    const cartToggle = () => {
+        return select ? removeFromCart(id): addToCart(data)
+    }
+
+    const { addToCart, removeFromCart } = useContext(MainContext);
     return (
         <S.ProductCardWrapper>
             <S.ProductImageLink to={`/product/detail/${id}`}>
@@ -32,6 +32,7 @@ const ProductCard = ({
                     <S.MainPrice>{currentPrice}</S.MainPrice>
                     <S.OldPrice>{oldPrice}</S.OldPrice>
                 </S.PriceBoard>
+                <Button onClick={cartToggle}>{ select ? "Remove from cart" : "Add to cart"}</Button>
             </S.ProductCardInfo>
         </S.ProductCardWrapper>
     );
