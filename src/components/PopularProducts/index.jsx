@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiperRef } from "hooks/useSwiperRef";
-import { Autoplay, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { breakpoints } from "./data";
 import { Container } from "components/Container/style";
 import { SwiperNavBtn } from "components/Banner/style";

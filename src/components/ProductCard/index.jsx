@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
+import { Button } from "@mui/material";
 import * as S from "./style";
 import Rate from "components/Rate";
-import { Button } from "@mui/material";
 import MainContext from "reducer/CartContext";
 
 const ProductCard = ({data, select}) => {
     const { inStock, image, name, currentPrice, oldPrice, id, mark } = data;
+    console.log(data, "hello");
     const cartToggle = () => {
-        return select ? removeFromCart(id): addToCart(data)
+        return select ? removeFromCart(data.id): addToCart(data)
     }
 
     const { addToCart, removeFromCart } = useContext(MainContext);

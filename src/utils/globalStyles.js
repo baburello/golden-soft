@@ -86,9 +86,10 @@ export const GlobalStyles = createGlobalStyle`
       color: red;
       ${adaptiveValue("font-size", 14, 12)}
       margin-top: 5px;
-
     }
 
-   
-
+    button{
+      background-color: transparent;
+      cursor: pointer;
+    }
 `;

@@ -39,12 +39,7 @@ const Category = () => {
                     {data?.map((el) => (
                         <ProductCard
                             key={el.id}
-                            currentPrice={el.currentPrice}
-                            image={el.image}
-                            inStock={el.inStock}
-                            name={el.name}
-                            oldPrice={el.oldPrice}
-                            id={el.id}
+                            data={el}
                         />
                     ))}
                 </CategoryListWrapper>

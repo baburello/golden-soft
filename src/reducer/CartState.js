@@ -6,6 +6,7 @@ import { ADD_TO_CART, REMOVE_FROM_CART } from "./types";
 const CartState = ({ children }) => {
     const initialState = {
         cartItems: [],
+        likeItems: []
     };
 
     const [state, dispatch] = useReducer(mainReducer, initialState);

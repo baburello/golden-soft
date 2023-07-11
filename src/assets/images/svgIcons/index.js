@@ -7,4 +7,5 @@ export {default as TwitterIcon} from "./twitter";
 export {default as FacebookIcon} from "./facebook";
 export {default as ArrowIcon} from "./arrowIcon";
 export {default as BoxIcon} from "./boxIcon";
-export {default as EvaluateIcon} from "./evaluate";
+export { default as EvaluateIcon } from "./evaluate";
+export {default as CloseIcon} from "./closeIcon"
