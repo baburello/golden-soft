@@ -20,7 +20,7 @@ import MainContext from "reducer/CartContext";
 
 const PopularProducts = () => {
     const [data, setData] = useState([]);
-    const { cartItems } = useContext(MainContext);
+    const { cartItems, likeItems } = useContext(MainContext);
 
     async function getData() {
         const res = await axios.get(`${process.env.REACT_APP_MAIN_URL}`);
@@ -66,10 +66,13 @@ const PopularProducts = () => {
                     className='mySwiper'
                 >
                     {data?.map((el) => (
-                        <SwiperSlide key={el.id}>
+                        <SwiperSlide key={el?.id}>
                             <ProductCard
                                 data={el}
-                                select={cartItems.some(
+                                select={cartItems.find(
+                                    (item) => item.id === el.id
+                                )}
+                                like={likeItems.some(
                                     (item) => item.id === el.id
                                 )}
                             />

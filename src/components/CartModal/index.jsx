@@ -7,8 +7,11 @@ import { Colors } from "utils/index";
 import { CloseIcon } from "assets/images/svgIcons";
 import ProductListItems from "./ProductListItems";
 
-
-export default function CartModal({ cartModal, handleModal, data }) {
+export default function CartModal({
+    cartModal,
+    handleModal,
+    data,
+}) {
     return (
         <div>
             <Modal
@@ -19,18 +22,16 @@ export default function CartModal({ cartModal, handleModal, data }) {
             >
                 <ModalBox>
                     <ModalBoxHeader>
-                        <HeaderTitle >Корзина</HeaderTitle>
+                        <HeaderTitle>Корзина</HeaderTitle>
                         <CloseBtn onClick={handleModal}>
                             <CloseIcon />
                         </CloseBtn>
                     </ModalBoxHeader>
                     <ModalBoxBody>
                         <ProductList>
-                            {
-                                data.map(el => (
-                                    <ProductListItems key={el.id} product={el} />
-                                ))
-                            }
+                            {data.map((el) => (
+                                <ProductListItems key={el.id} product={el} />
+                            ))}
                         </ProductList>
                     </ModalBoxBody>
                 </ModalBox>
@@ -60,7 +61,7 @@ const ModalBoxHeader = styled.div`
     ${Flex.spaceBetween};
     border-bottom: 1px solid ${Colors.borderColor};
     padding: 16px 40px;
-`
+`;
 
 const HeaderTitle = styled.h2`
     color: ${Colors.dark};
@@ -70,7 +71,7 @@ const HeaderTitle = styled.h2`
 `;
 
 const ModalBoxBody = styled.div`
-      padding: 16px 40px;
+    padding: 16px 40px;
 `;
 
 const ProductList = styled.ul`
@@ -78,6 +79,4 @@ const ProductList = styled.ul`
     flex-direction: column;
     width: 100%;
     column-gap: 30px;
-
-
-`
+`;
