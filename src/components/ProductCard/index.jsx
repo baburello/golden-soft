@@ -39,22 +39,22 @@ const ProductCard = ({ data, select, like }) => {
                 <S.PriceBoard>
                     <S.MainPrice>{currentPrice}</S.MainPrice>
                     <S.OldPrice>{oldPrice}</S.OldPrice>
-                <div>
-                    <IconButton onClick={cartToggle}>
-                        {select ? (
-                            <LocalMallRoundedIcon color='primary' />
-                        ) : (
-                            <ShoppingBagOutlinedIcon />
-                        )}
-                    </IconButton>
-                    <IconButton onClick={likeToggle}>
-                        {like ? (
-                            <FavoriteBorderOutlinedIcon color='error' />
-                        ) : (
-                            <FavoriteRoundedIcon color='error' />
-                        )}
-                    </IconButton>
-                </div>
+                    <div>
+                        <IconButton onClick={cartToggle}>
+                            {select ? (
+                                <LocalMallRoundedIcon color='primary' />
+                            ) : (
+                                <ShoppingBagOutlinedIcon />
+                            )}
+                        </IconButton>
+                        <IconButton onClick={likeToggle}>
+                            {like ? (
+                                <FavoriteRoundedIcon color='error' />
+                            ) : (
+                                <FavoriteBorderOutlinedIcon color='error' />
+                            )}
+                        </IconButton>
+                    </div>
                 </S.PriceBoard>
             </S.ProductCardInfo>
         </S.ProductCardWrapper>
