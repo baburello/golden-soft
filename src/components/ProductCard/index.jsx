@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
 import Rate from "components/Rate";
-import { Button } from "@mui/material";
+import { IconButton } from "@mui/material";
 import MainContext from "reducer/CartContext";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import LocalMallRoundedIcon from "@mui/icons-material/LocalMallRounded";
 import * as S from "./style";
 
 const ProductCard = ({ data, select, like }) => {
@@ -35,11 +39,23 @@ const ProductCard = ({ data, select, like }) => {
                 <S.PriceBoard>
                     <S.MainPrice>{currentPrice}</S.MainPrice>
                     <S.OldPrice>{oldPrice}</S.OldPrice>
+                <div>
+                    <IconButton onClick={cartToggle}>
+                        {select ? (
+                            <LocalMallRoundedIcon color='primary' />
+                        ) : (
+                            <ShoppingBagOutlinedIcon />
+                        )}
+                    </IconButton>
+                    <IconButton onClick={likeToggle}>
+                        {like ? (
+                            <FavoriteBorderOutlinedIcon color='error' />
+                        ) : (
+                            <FavoriteRoundedIcon color='error' />
+                        )}
+                    </IconButton>
+                </div>
                 </S.PriceBoard>
-                <Button onClick={cartToggle}>
-                    {select ? "Remove from cart" : "Add to cart"}
-                </Button>
-                <Button onClick={likeToggle}>{ like ? "Remove" : "Add"}</Button>
             </S.ProductCardInfo>
         </S.ProductCardWrapper>
     );

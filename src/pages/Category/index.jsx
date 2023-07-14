@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -11,10 +11,12 @@ import PopularProducts from "components/PopularProducts";
 import ContactForm from "components/ContactForm";
 import InfoColumns from "components/InfoColumns";
 import { infoData, infoSecondData } from "components/InfoColumns/data";
+import MainContext from "reducer/CartContext";
 
 const Category = () => {
     const { type } = useParams();
     const [data, setData] = useState([]);
+    const { cartItems, likeItems } = useContext(MainContext);
     const categoryText = type.toLocaleLowerCase();
 
     async function getProduct() {
@@ -40,6 +42,12 @@ const Category = () => {
                         <ProductCard
                             key={el.id}
                             data={el}
+                            select={cartItems.find(
+                                (item) => item.id === el.id
+                            )}
+                            like={likeItems.some(
+                                (item) => item.id === el.id
+                            )}
                         />
                     ))}
                 </CategoryListWrapper>

@@ -12,6 +12,7 @@ import {
 } from "assets/images/svgIcons";
 import CartModal from "components/CartModal";
 import MainContext from "reducer/CartContext";
+import LikeModal from "components/LikeModal";
 
 const Header = () => {
     const [burger, setBurger] = useState(false);
@@ -98,6 +99,7 @@ const Header = () => {
                         handleModal={handleModal}
                         data={cartItems}
                     />
+                    <LikeModal likeModal={likeModal} handleLike={handleLike} />
                     <BurgerMenu open={burger} handleClick={handleClick} />
                 </Style.HeaderNavbar>
             </Style.HeaderWrapper>

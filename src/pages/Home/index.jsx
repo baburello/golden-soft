@@ -7,7 +7,7 @@ import WhyUs from "../../components/WhyUs";
 import CategoryList from "../../components/CategoryList";
 import PopularProducts from "../../components/PopularProducts";
 import ContactForm from "../../components/ContactForm";
-import HeaderTop from "components/Header/HeaderTop";
+
 
 const Home = () => {
     return (

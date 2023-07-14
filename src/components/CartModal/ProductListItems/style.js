@@ -7,6 +7,10 @@ const ProductWrapper = styled.div`
     ${Flex.spaceBetween};
     width: 100%;
     height: 100%;
+
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
 `;
 
 const ImageWrapper = styled.div`
@@ -26,7 +30,8 @@ const ProductInfoWrapper = styled.div`
 `;
 
 const ProductInfo = styled.div`
-    ${Flex.spaceBetween}
+    ${Flex.spaceBetween};
+    align-items: flex-start;
     flex-direction: column;
     gap: 30px;
     height: 100%;
@@ -56,13 +61,26 @@ const ProductCount = styled.span`
     padding: 5px 22px;
     border: 1px solid ${Colors.dark};
     color:${Colors.dark};
+`;
 
+const Block = styled.div`
+    ${Flex.alignCenter};
+    gap: 12px;
 `
 
-const ProductAction = styled.div`
-    ${Flex.flexBetween};
-    flex-direction: column;
-`;
+// const ProductAction = styled.div`
+//     ${Flex.flexBetween};
+//     flex-direction: column;
+// `;
+
+const Actions = styled.div`
+${Flex.justFlex};
+gap: 30px;
+flex-direction: column;
+justify-content: space-between;
+align-items: end;
+
+`
 
 export {
     ProductWrapper,
@@ -73,5 +91,6 @@ export {
     BtnGroup,
     CounterBtn,
     ProductCount,
-    ProductAction,
+    Actions,
+    Block
 };
