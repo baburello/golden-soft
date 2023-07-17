@@ -53,7 +53,7 @@ const CounterBtn = styled.button`
     color: ${Colors.dart};
 
     &:disabled {
-        color: ${Colors.lightGray};
+        color: ${Colors.borderColor};
     }
 `;
 

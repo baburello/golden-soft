@@ -11,7 +11,7 @@ import PopularProducts from "components/PopularProducts";
 import ContactForm from "components/ContactForm";
 import InfoColumns from "components/InfoColumns";
 import { infoData, infoSecondData } from "components/InfoColumns/data";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 
 const Category = () => {
     const { type } = useParams();
@@ -42,19 +42,15 @@ const Category = () => {
                         <ProductCard
                             key={el.id}
                             data={el}
-                            select={cartItems.find(
-                                (item) => item.id === el.id
-                            )}
-                            like={likeItems.some(
-                                (item) => item.id === el.id
-                            )}
+                            select={cartItems.find((item) => item.id === el.id)}
+                            like={likeItems.some((item) => item.id === el.id)}
                         />
                     ))}
                 </CategoryListWrapper>
             </Container>
             <PopularProducts />
             <InfoColumns data={infoData} />
-            <InfoColumns data={infoSecondData} reverse={true}/>
+            <InfoColumns data={infoSecondData} reverse={true} />
             <ContactForm />
             <Footer />
         </>
@@ -70,12 +66,12 @@ const CategoryListWrapper = styled.div`
     row-gap: 50px;
     flex-wrap: wrap;
     margin-block: 70px;
-   
-   @media(max-width: 768px){
-    grid-template-columns: repeat(2, 1fr);
-   }
-   @media(max-width: 576px){
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
-   }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
 `;

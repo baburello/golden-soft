@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Rate from "components/Rate";
 import { IconButton } from "@mui/material";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
@@ -10,7 +10,6 @@ import * as S from "./style";
 
 const ProductCard = ({ data, select, like }) => {
     const { inStock, image, name, currentPrice, oldPrice, id, mark } = data;
-    console.log(data, "hello");
     const cartToggle = () => {
         return select ? removeFromCart(data.id) : addToCart(data);
     };

@@ -11,13 +11,13 @@ import {
     PhoneLogo,
 } from "assets/images/svgIcons";
 import CartModal from "components/CartModal";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import LikeModal from "components/LikeModal";
 
 const Header = () => {
     const [burger, setBurger] = useState(false);
     const [cartModal, setCartModal] = useState(false);
-    const  [likeModal, setLikeModal] =useState(false)
+    const [likeModal, setLikeModal] = useState(false);
     const { cartItems, likeItems } = useContext(MainContext);
 
     const handleClick = () => {
@@ -30,7 +30,7 @@ const Header = () => {
 
     const handleLike = () => {
         setLikeModal(!likeModal);
-    }
+    };
 
     //no scroll when burgermenu is open
     useEffect(() => {

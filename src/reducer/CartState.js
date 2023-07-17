@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import mainReducer from "./CartReducer";
-import MainContext from "./CartContext";
+import MainContext from "../context/CartContext";
 import {
     ADD_TO_CART,
     ADD_TO_LIKEBOX,
