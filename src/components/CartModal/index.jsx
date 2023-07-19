@@ -1,30 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "@mui/material/Modal";
 import { CloseIcon } from "assets/images/svgIcons";
 import ProductListItems from "./ProductListItems";
 import * as S from "./style";
 import Button from "components/Button";
+import MainContext from "context/CartContext";
 
 export default function CartModal({ cartModal, handleModal, data }) {
-    const [totalPrice, setTotalPrice] = useState(0);
+    // const [totalPrice, setTotalPrice] = useState(0);
+    const { cartItems } = useContext(MainContext);
 
-    const result = [];
-    const price = () => {
-        for (const iterator of data) {
-            result.push(iterator.currentPrice);
-        }
+    const total = cartItems.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.currentPrice * currentValue.quantity,
+        0
+    );
 
-        const cost = result.reduce(
-            (accumulator, currentValue) => accumulator + currentValue,
-            0
-        );
-
-        return setTotalPrice(cost);
-    };
-
-    useEffect(() => {
-        price()
-    }, [data]);
     return (
         <Modal
             open={cartModal}
@@ -50,7 +40,7 @@ export default function CartModal({ cartModal, handleModal, data }) {
                                     <S.TotalPriceTitle>
                                         Итого:
                                     </S.TotalPriceTitle>
-                                    <S.TotalPrice>{totalPrice.toLocaleString()}P</S.TotalPrice>
+                                    <S.TotalPrice>{total.toLocaleString()}₽</S.TotalPrice>
                                 </S.BuyPriceBoard>
                                 <S.PriceBtnGroup>
                                     <Button text={"Оформить заказ"} />
